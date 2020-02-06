@@ -1,23 +1,27 @@
 $(document).ready(function(){
 
   // Code
-  var query = 'Il nome della rosa';
+  $(document).on('click', 'button', function(){
+    var userQuery = $('input').val();
+    console.log('query: '+userQuery);
 
-  $.ajax({
-      url: 'https://api.themoviedb.org/3/search/movie',
-      method: 'GET',
-      data: {
-        api_key: '6553c54bc5bb11e2f515434399a316b3',
-        query: query
-        },
-      success: function(data) {
-        var movies = data.results;
-        getMovies(movies);
-      }, // Success
-      error: function(request, state, errors) {
-        console.log(errors);
-      } // Error
-    }); // ajax
+    $.ajax({
+        url: 'https://api.themoviedb.org/3/search/movie',
+        method: 'GET',
+        data: {
+          api_key: '6553c54bc5bb11e2f515434399a316b3',
+          query: userQuery
+          },
+        success: function(data) {
+          var movies = data.results;
+          getMovies(movies);
+        }, // Success
+        error: function(request, state, errors) {
+          console.log(errors);
+        } // Error
+      }); // ajax
+
+  }) // Click Button
 
 
   //////////////////////////////////////////////////
@@ -26,6 +30,7 @@ $(document).ready(function(){
 
   // FX Get Movies
   function getMovies(movies) {
+    $('.container').html('');
     // Handlebars source
     var source = $('#movies-template').html();
     var template = Handlebars.compile(source);
@@ -42,7 +47,7 @@ $(document).ready(function(){
       };
       var html = template(context);
       $('.container').append(html);
-    }
+    } // Loop - Get Single Movie
   } // FX Get Movies
 
 //////////
