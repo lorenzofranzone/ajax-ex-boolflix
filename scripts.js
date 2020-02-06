@@ -1,6 +1,7 @@
 $(document).ready(function(){
 
   // Code
+  // Click on button
   $(document).on('click', 'button', function(){
     var userQuery = $('input').val();
     console.log('query: '+userQuery);
@@ -22,6 +23,30 @@ $(document).ready(function(){
       }); // ajax
 
   }) // Click Button
+
+  // Keypress on input
+  $('input').keypress(function(event){
+    if (event.which == 13) {
+      var userQuery = $('input').val();
+      console.log('query: '+userQuery);
+      
+      $.ajax({
+        url: 'https://api.themoviedb.org/3/search/movie',
+        method: 'GET',
+        data: {
+          api_key: '6553c54bc5bb11e2f515434399a316b3',
+          query: userQuery
+          },
+        success: function(data) {
+          var movies = data.results;
+          getMovies(movies);
+        }, // Success
+        error: function(request, state, errors) {
+          console.log(errors);
+        } // Error
+      }); // ajax
+    }
+  });
 
 
   //////////////////////////////////////////////////
