@@ -6,3 +6,48 @@ Reset */
   margin: 0;
   box-sizing: border-box;
 }
+
+.wrapper {
+  /* SIZE */
+  width: 80%;
+  margin: 24px auto;
+  padding: 24px;
+  /* STYLE */
+  border: 1px solid #ccc;
+  /* TYPOGRAPHY */
+  /* DISPLAY */
+  /* POSITION */
+  /* INTERACTION */
+}
+
+.container {
+  /* SIZE */
+  /* STYLE */
+  margin: 24px 0;
+  /* TYPOGRAPHY */
+  /* DISPLAY */
+  /* POSITION */
+  /* INTERACTION */
+}
+
+.movie-list {
+  /* SIZE */
+  margin-bottom: 12px;
+  /* STYLE */
+  /* TYPOGRAPHY */
+  /* DISPLAY */
+  /* POSITION */
+  /* INTERACTION */
+}
+
+.movie-list li {
+  /* SIZE */
+  /* STYLE */
+  list-style: none;
+  /* TYPOGRAPHY */
+  /* DISPLAY */
+  /* POSITION */
+  /* INTERACTION */
+}
+
+#movies-template { display: none; }

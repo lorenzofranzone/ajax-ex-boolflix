@@ -16,7 +16,23 @@
 </head>
 <body>
 
-  ...
+  <div class="wrapper">
+    <input type="text" name="" value="">
+    <button type="button" name="button">Search</button>
+    <div class="container">
+      <!-- Code -->
+    </div>
+  </div>
+
+  <!-- Movies Template -->
+  <script id="movies-template" type="text/x-handlebars-template">
+    <ul class="movie-list">
+      <li><strong>Title</strong>: {{title}}</li>
+      <li><strong>Original title</strong>: {{original_title}}</li>
+      <li><strong>Original language</strong>: {{original_language}}</li>
+      <li><strong>Vote</strong>: {{vote_average}}</li>
+    </ul>
+  </script>
 
   <script src="scripts.js"></script>
 
