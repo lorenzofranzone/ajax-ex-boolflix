@@ -32,13 +32,13 @@ $(document).ready(function(){
     // Loop - Get Single Movie
     for (var i = 0; i < movies.length; i++) {
       var singleMovie = movies[i];
-      console.log(singleMovie);
       // Handlebars injection
       var context = {
         title: singleMovie.title,
         original_title: singleMovie.original_title,
         original_language: singleMovie.original_language,
         vote_average: singleMovie.vote_average,
+        vote_stars: voteStars(singleMovie.vote_average)
       };
       var html = template(context);
       $('.container').append(html);
@@ -74,6 +74,14 @@ $(document).ready(function(){
       }
     })
   } // FX Get Movies
+
+  // FX Vote Stars
+  function voteStars(num) {
+    return Math.round((num / 10) * 5);
+  } // FX Vote Stars
+
+
+
 
 //////////
 });
