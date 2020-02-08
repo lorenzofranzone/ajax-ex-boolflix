@@ -4,47 +4,18 @@ $(document).ready(function(){
   // Click on button
   $(document).on('click', 'button', function(){
     var userQuery = $('input').val();
-    console.log('query: '+userQuery);
 
-    $.ajax({
-        url: 'https://api.themoviedb.org/3/search/movie',
-        method: 'GET',
-        data: {
-          api_key: '6553c54bc5bb11e2f515434399a316b3',
-          query: userQuery
-          },
-        success: function(data) {
-          var movies = data.results;
-          getMovies(movies);
-        }, // Success
-        error: function(request, state, errors) {
-          console.log(errors);
-        } // Error
-      }); // ajax
+    resetSearch();
+    getMovies(userQuery);
 
   }) // Click Button
 
   // Keypress on input
   $('input').keypress(function(event){
+    var userQuery = $('input').val();
     if (event.which == 13) {
-      var userQuery = $('input').val();
-      console.log('query: '+userQuery);
-      
-      $.ajax({
-        url: 'https://api.themoviedb.org/3/search/movie',
-        method: 'GET',
-        data: {
-          api_key: '6553c54bc5bb11e2f515434399a316b3',
-          query: userQuery
-          },
-        success: function(data) {
-          var movies = data.results;
-          getMovies(movies);
-        }, // Success
-        error: function(request, state, errors) {
-          console.log(errors);
-        } // Error
-      }); // ajax
+      resetSearch();
+      getMovies(userQuery);
     }
   });
 
@@ -53,9 +24,8 @@ $(document).ready(function(){
   // F U N C T I O N S
   //////////////////////////////////////////////////
 
-  // FX Get Movies
-  function getMovies(movies) {
-    $('.container').html('');
+  // FX Print Movies
+  function printMovies(movies) {
     // Handlebars source
     var source = $('#movies-template').html();
     var template = Handlebars.compile(source);
@@ -73,6 +43,36 @@ $(document).ready(function(){
       var html = template(context);
       $('.container').append(html);
     } // Loop - Get Single Movie
+  } // FX Print Movies
+
+
+  // FX Reset search
+  function resetSearch() {
+    $('.container').html('');
+    $('input').val('');
+  } // FX Reset search
+
+  // FX Get Movies
+  function getMovies(userQuery) {
+    var url = 'https://api.themoviedb.org/3/search/movie';
+    var apiKey = '6553c54bc5bb11e2f515434399a316b3';
+
+    $.ajax({
+      url : url,
+      method : 'GET',
+      data : {
+        api_key : apiKey,
+        query : userQuery,
+        language : 'it-IT'
+      },
+      success : function(data) {
+        var movies = data.results;
+        printMovies(movies);
+      }, // success
+      error : function(request, state, errors) {
+
+      }
+    })
   } // FX Get Movies
 
 //////////
