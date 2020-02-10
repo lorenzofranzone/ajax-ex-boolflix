@@ -37,8 +37,7 @@ $(document).ready(function(){
         title: singleMovie.title,
         original_title: singleMovie.original_title,
         original_language: singleMovie.original_language,
-        vote_average: singleMovie.vote_average,
-        vote_stars: voteStars(singleMovie.vote_average)
+        vote_average: printStars(singleMovie.vote_average)
       };
       var html = template(context);
       $('.container').append(html);
@@ -75,11 +74,19 @@ $(document).ready(function(){
     })
   } // FX Get Movies
 
-  // FX Vote Stars
-  function voteStars(num) {
-    return Math.round((num / 10) * 5);
-  } // FX Vote Stars
-
+  // FX Print Stars
+  function printStars(num) {
+    num = Math.ceil(num / 2);
+    var string = '';
+    for (var i = 1; i <= 5; i++) {
+      if (i < 5) {
+        string = '<i class="fas fa-star"></i>';
+      } else {
+        string = '<i class="far fa-star"></i>';
+      }
+    }
+    return string;
+  } // FX Print Stars
 
 
 
