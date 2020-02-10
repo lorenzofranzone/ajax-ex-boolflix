@@ -79,10 +79,10 @@ $(document).ready(function(){
     num = Math.ceil(num / 2);
     var string = '';
     for (var i = 1; i <= 5; i++) {
-      if (i < 5) {
-        string = '<i class="fas fa-star"></i>';
+      if (i < num) {
+        string += '<i class="fas fa-star"></i>';
       } else {
-        string = '<i class="far fa-star"></i>';
+        string += '<i class="far fa-star"></i>';
       }
     }
     return string;
