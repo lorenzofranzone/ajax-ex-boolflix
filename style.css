@@ -50,4 +50,5 @@ Reset */
   /* INTERACTION */
 }
 
-#movies-template { display: none; }
+#movies-template,
+#no-result-template { display: none; }

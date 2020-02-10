@@ -23,19 +23,34 @@
   <div class="wrapper">
     <input type="text" name="" value="">
     <button type="button" name="button">Search</button>
-    <div class="container">
+    <!-- Container Film -->
+    <h2>Film</h2>
+    <div class="container-films">
       <!-- Code -->
+
+    </div>
+    <!-- Container Tv -->
+    <h2>Tv</h2>
+    <div class="container-tvs">
+      <!-- Code -->
+
     </div>
   </div>
 
   <!-- Movies Template -->
   <script id="movies-template" type="text/x-handlebars-template">
     <ul class="movie-list">
+      <li><strong>Type</strong>: {{type}}</li>
       <li><strong>Title</strong>: {{title}}</li>
       <li><strong>Original title</strong>: {{original_title}}</li>
       <li><strong>Original language</strong>: {{{original_language}}}</li>
       <li><strong>Vote</strong>: {{{vote_average}}}</li>
     </ul>
+  </script>
+
+  <!-- No Result Template -->
+  <script id="no-result-template" type="text/x-handlebars-template">
+    <li>No results! Try another query search</li>
   </script>
 
   <script src="scripts.js"></script>
