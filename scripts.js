@@ -36,11 +36,12 @@ $(document).ready(function(){
       var context = {
         title: singleMovie.title,
         original_title: singleMovie.original_title,
-        original_language: singleMovie.original_language,
+        original_language: printLangFlags(singleMovie.original_language),
         vote_average: printStars(singleMovie.vote_average)
       };
       var html = template(context);
       $('.container').append(html);
+      console.log('lang: ' + singleMovie.original_language);
     } // Loop - Get Single Movie
   } // FX Print Movies
 
@@ -88,6 +89,10 @@ $(document).ready(function(){
     return string;
   } // FX Print Stars
 
+  // FX Print Lang Flags
+  function printLangFlags(string) {
+    return '<span class="flag-icon flag-icon-' + string + '"></span>';
+  }
 
 
 //////////
