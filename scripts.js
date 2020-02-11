@@ -139,13 +139,15 @@ $(document).ready(function(){
         originalTitle = singleResult.original_title;
         var container = $('.container-films');
       }
-      if (type == 'tv') {
+      else if (type == 'tv') {
         title = singleResult.name;
         originalTitle = singleResult.original_name;
         var container = $('.container-tvs');
       }
+
       // Handlebars injection
       var context = {
+        poster: printPoster(singleResult.poster_path, title),
         type: type,
         title: title,
         original_title: originalTitle,
@@ -157,6 +159,23 @@ $(document).ready(function(){
       console.log('lang: ' + singleResult.original_language);
     } // Loop - Get Single Movie
   } // FX PRINT MOVIES
+
+  // ––––––––––––––––––––––––––––––––––––––––––––––––––
+  // FX PRINT POSTER
+  function printPoster(posterPath, title) {
+    var posterImg;
+    var urlBaseImg = 'https://image.tmdb.org/t/p/w342/';
+    if(posterPath == null) {
+      posterImg = '<img src="default-poster.png" alt="' + title + '">';
+    }
+    else {
+      posterImg = '<img src="' + urlBaseImg + posterPath + '" alt="' + title + '">';
+    }
+    return posterImg;
+  } // FX PRINT POSTER
+
+  // https://image.tmdb.org/t/p/w342/
+  // w342
 
 
 
