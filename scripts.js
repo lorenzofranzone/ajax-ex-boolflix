@@ -166,7 +166,7 @@ $(document).ready(function(){
     var posterImg;
     var urlBaseImg = 'https://image.tmdb.org/t/p/w342/';
     if(posterPath == null) {
-      posterImg = '<img src="default-poster.png" alt="' + title + '">';
+      posterImg = '<img src="img/default-poster.png" alt="' + title + '">';
     }
     else {
       posterImg = '<img src="' + urlBaseImg + posterPath + '" alt="' + title + '">';
