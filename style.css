@@ -7,48 +7,126 @@ Reset */
   box-sizing: border-box;
 }
 
-.wrapper {
-  /* SIZE */
-  width: 80%;
-  margin: 24px auto;
-  padding: 24px;
-  /* STYLE */
-  border: 1px solid #ccc;
-  /* TYPOGRAPHY */
-  /* DISPLAY */
-  /* POSITION */
-  /* INTERACTION */
-}
-
-.container {
-  /* SIZE */
-  /* STYLE */
-  margin: 24px 0;
-  /* TYPOGRAPHY */
-  /* DISPLAY */
-  /* POSITION */
-  /* INTERACTION */
-}
-
-.movie-list {
-  /* SIZE */
-  margin-bottom: 12px;
-  /* STYLE */
-  /* TYPOGRAPHY */
-  /* DISPLAY */
-  /* POSITION */
-  /* INTERACTION */
-}
-
-.movie-list li {
-  /* SIZE */
-  /* STYLE */
-  list-style: none;
-  /* TYPOGRAPHY */
-  /* DISPLAY */
-  /* POSITION */
-  /* INTERACTION */
-}
-
 #movies-template,
 #no-result-template { display: none; }
+
+/* //////////////////////////////////////////////////
+––––––––––––––––––––––––––––––––––––––––––––––––––
+G E N E R A L
+––––––––––––––––––––––––––––––––––––––––––––––––––
+////////////////////////////////////////////////// */
+
+body {
+  /* SIZE */
+  /* STYLE */
+  background: #ddd;
+  /* TYPOGRAPHY */
+  font-family: 'Montserrat', sans-serif;
+  color: #fff;
+  /* DISPLAY */
+  /* POSITION */
+  /* INTERACTION */
+}
+
+/* //////////////////////////////////////////////////
+––––––––––––––––––––––––––––––––––––––––––––––––––
+H E A D E R
+––––––––––––––––––––––––––––––––––––––––––––––––––
+////////////////////////////////////////////////// */
+
+header {
+  /* SIZE */
+  width: 100%;
+  height: 68px;
+  padding: 0 60px;
+  /* STYLE */
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 10%, rgba(0, 0, 0, 0));
+  /* TYPOGRAPHY */
+  /* DISPLAY */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* POSITION */
+  /* INTERACTION */
+}
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––––––
+Logo */
+
+.logo {
+  /* SIZE */
+  flex-basis: 90px;
+  /* STYLE */
+  /* TYPOGRAPHY */
+  /* DISPLAY */
+  /* POSITION */
+  /* INTERACTION */
+}
+
+.logo img {
+  /* SIZE */
+  width: 100%;
+  /* STYLE */
+  /* TYPOGRAPHY */
+  /* DISPLAY */
+  /* POSITION */
+  /* INTERACTION */
+}
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––––––
+Search Field */
+
+.search-field {
+  /* SIZE */
+  flex-basis: 60%;
+  padding: 6px;
+  /* STYLE */
+  border: 1px solid #fff;
+  /* TYPOGRAPHY */
+  /* DISPLAY */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* POSITION */
+  /* INTERACTION */
+}
+
+.search-field input {
+  /* SIZE */
+  flex-grow: 5;
+  padding: 4px 6px;
+  margin-right: 12px;
+  /* STYLE */
+  /* TYPOGRAPHY */
+  /* DISPLAY */
+  /* POSITION */
+  /* INTERACTION */
+}
+
+.search-field button {
+  /* SIZE */
+  flex-grow: 1;
+  padding: 5px 6px;
+  /* STYLE */
+  /* TYPOGRAPHY */
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  /* DISPLAY */
+  /* POSITION */
+  /* INTERACTION */
+  cursor: pointer;
+}
+
+/* //////////////////////////////////////////////////
+––––––––––––––––––––––––––––––––––––––––––––––––––
+M A I N
+––––––––––––––––––––––––––––––––––––––––––––––––––
+////////////////////////////////////////////////// */
+
+
+
+/* //////////////////////////////////////////////////
+––––––––––––––––––––––––––––––––––––––––––––––––––
+F O O T E R
+––––––––––––––––––––––––––––––––––––––––––––––––––
+////////////////////////////////////////////////// */
