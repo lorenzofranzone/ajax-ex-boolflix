@@ -19,9 +19,10 @@ G E N E R A L
 body {
   /* SIZE */
   /* STYLE */
-  background: #ddd;
+  background: #141414;
   /* TYPOGRAPHY */
   font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
   color: #fff;
   /* DISPLAY */
   /* POSITION */
@@ -66,8 +67,10 @@ Logo */
 .logo img {
   /* SIZE */
   width: 100%;
+  margin-right: 32px;
   /* STYLE */
   /* TYPOGRAPHY */
+  vertical-align: middle;
   /* DISPLAY */
   /* POSITION */
   /* INTERACTION */
@@ -78,36 +81,55 @@ Search Field */
 
 .search-field {
   /* SIZE */
-  flex-basis: 60%;
+  flex-basis: 50%;
   padding: 6px;
   /* STYLE */
-  border: 1px solid #fff;
   /* TYPOGRAPHY */
   /* DISPLAY */
   display: flex;
   justify-content: space-between;
   align-items: center;
   /* POSITION */
+  position: relative;
   /* INTERACTION */
 }
 
 .search-field input {
   /* SIZE */
   flex-grow: 5;
-  padding: 4px 6px;
-  margin-right: 12px;
+  padding: 8px 6px 8px 32px;
   /* STYLE */
+  background: #000;
+  border: 1px solid #fff;
   /* TYPOGRAPHY */
+  font-size: 15px;
+  color: #fff;
   /* DISPLAY */
   /* POSITION */
   /* INTERACTION */
 }
 
+.search-field:before {
+  /* SIZE */
+  /* STYLE */
+  /* TYPOGRAPHY */
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 700;
+  /* DISPLAY */
+  content: '\f002';
+  /* POSITION */
+  position: absolute;
+  left: 16px;
+  /* INTERACTION */
+}
+
 .search-field button {
   /* SIZE */
-  flex-grow: 1;
-  padding: 5px 6px;
+  flex-grow: 0;
+  padding: 10px 6px 11px;
   /* STYLE */
+  background: #fff;
+  border: 1px solid #fff;
   /* TYPOGRAPHY */
   letter-spacing: 0.5px;
   text-transform: uppercase;
@@ -123,7 +145,84 @@ M A I N
 ––––––––––––––––––––––––––––––––––––––––––––––––––
 ////////////////////////////////////////////////// */
 
+/* ––––––––––––––––––––––––––––––––––––––––––––––––––
+Wrapper */
 
+.wrapper {
+  /* SIZE */
+  width: 100%;
+  padding: 60px;
+  /* STYLE */
+  /* TYPOGRAPHY */
+  /* DISPLAY */
+  /* POSITION */
+  /* INTERACTION */
+}
+
+.wrapper h2 {
+  /* SIZE */
+  margin-bottom: 16px;
+  /* STYLE */
+  /* TYPOGRAPHY */
+  font-size: 23.8px;
+  color: #e5e5e5;
+  /* DISPLAY */
+  /* POSITION */
+  /* INTERACTION */
+}
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––––––
+Containers */
+
+.wrapper div[class*="container-"] {
+  /* SIZE */
+  width: 100%;
+  margin-bottom: 64px;
+  /* STYLE */
+  /* TYPOGRAPHY */
+  /* DISPLAY */
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  /* POSITION */
+  /* INTERACTION */
+}
+
+/* ––––––––––––––––––––––––––––––––––––––––––––––––––
+Movie List ul */
+
+.movie-list {
+  /* SIZE */
+  width: 16.66%;
+  margin: 12px 0;
+  /* STYLE */
+  /* TYPOGRAPHY */
+  /* DISPLAY */
+  /* POSITION */
+  /* INTERACTION */
+}
+
+.movie-list li {
+  /* SIZE */
+  /* STYLE */
+  /* TYPOGRAPHY */
+  /* DISPLAY */
+  list-style: none;
+  /* POSITION */
+  /* INTERACTION */
+}
+
+.movie-list li.poster-item img {
+  /* SIZE */
+  width: 100%;
+  height: 400px;
+  /* STYLE */
+  /* TYPOGRAPHY */
+  /* DISPLAY */
+  object-fit: cover;
+  /* POSITION */
+  /* INTERACTION */
+}
 
 /* //////////////////////////////////////////////////
 ––––––––––––––––––––––––––––––––––––––––––––––––––
