@@ -189,17 +189,60 @@ Containers */
 }
 
 /* ––––––––––––––––––––––––––––––––––––––––––––––––––
-Movie List ul */
+Item */
 
-.movie-list {
+.item {
   /* SIZE */
   width: 16.66%;
-  margin: 12px 0;
   /* STYLE */
+  background: pink;
   /* TYPOGRAPHY */
   /* DISPLAY */
   /* POSITION */
+  position: relative;
   /* INTERACTION */
+  cursor: pointer;
+}
+
+.item:hover .movie-list  {
+  /* SIZE */
+  /* STYLE */
+  /* TYPOGRAPHY */
+  /* DISPLAY */
+  display: block;
+  /* POSITION */
+  /* INTERACTION */
+}
+
+.poster-item img {
+  /* SIZE */
+  width: 100%;
+  height: 400px;
+  /* STYLE */
+  /* TYPOGRAPHY */
+  /* DISPLAY */
+  object-fit: cover;
+  /* POSITION */
+  /* INTERACTION */
+}
+
+.movie-list {
+  /* SIZE */
+  width: 100%;
+  padding: 8px;
+  /* STYLE */
+  background: rgba(0,0,0,.9);
+  /* TYPOGRAPHY */
+  /* DISPLAY */
+  display: none;
+  /* POSITION */
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  /* INTERACTION */
+  transition: all 1s;
 }
 
 .movie-list li {
@@ -208,18 +251,6 @@ Movie List ul */
   /* TYPOGRAPHY */
   /* DISPLAY */
   list-style: none;
-  /* POSITION */
-  /* INTERACTION */
-}
-
-.movie-list li.poster-item img {
-  /* SIZE */
-  width: 100%;
-  height: 400px;
-  /* STYLE */
-  /* TYPOGRAPHY */
-  /* DISPLAY */
-  object-fit: cover;
   /* POSITION */
   /* INTERACTION */
 }

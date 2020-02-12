@@ -49,14 +49,18 @@
 
   <!-- Movies Template -->
   <script id="movies-template" type="text/x-handlebars-template">
-    <ul class="movie-list">
-      <li class="poster-item">{{{poster}}}</li>
-      <li><strong>Type</strong>: {{type}}</li>
-      <li><strong>Title</strong>: {{title}}</li>
-      <li><strong>Original title</strong>: {{original_title}}</li>
-      <li><strong>Original language</strong>: {{{original_language}}}</li>
-      <li><strong>Vote</strong>: {{{vote_average}}}</li>
-    </ul>
+    <div class="item">
+      <div class="poster-item">
+        {{{poster}}}
+      </div>
+      <ul class="movie-list">
+        <li><strong>Type</strong>: {{type}}</li>
+        <li><strong>Title</strong>: {{title}}</li>
+        <li><strong>Original title</strong>: {{original_title}}</li>
+        <li><strong>Original language</strong>: {{{original_language}}}</li>
+        <li><strong>Vote</strong>: {{{vote_average}}}</li>
+      </ul>
+    </div> <!-- item -->
   </script>
 
   <!-- No Result Template -->
